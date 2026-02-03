@@ -10,6 +10,7 @@ int main() {
   string msgHeight[] = {"Enter height: ", "Введите высоту: "};
   string msgError[] = {"Invalid value.", "Недопустимое значение."};
   string msgChar[] = {"Enter char: ", "Введите символ: "};
+  string msgExit[] = {"Press Enter to exit...", "Нажмите Enter, чтобы выйти..."};
 
   // Choosing language
   int lang;
@@ -85,6 +86,10 @@ int main() {
     }
     cout << endl;
   }
+
+  // Exit
   cout << '\n';
+  cout << msgExit[lang] << endl;
+  cin.get();
   return 0;
 }
