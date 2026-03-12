@@ -4,8 +4,9 @@ Welcome to my repository with educational projects. Here I assemble my C++ progr
 
 ## Content
 * [ASCII Shape Generator](./ASCII-shape-generator) is a program for drawing rectangles with characters with protection against incorrect input.
+* [Calculator](./Calculator) a simple calculator.
 
 ## How to compile any project
-There is a file inside each folder `main.cpp`. To compile, use:
+There is a file inside each folder `name_of_program.cpp`. To compile, use:
 ```bash
 g++ main.cpp -o program_name
