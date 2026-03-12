@@ -11,7 +11,7 @@ There is a file inside each folder `name_of_program.cpp`. To compile, use:
 ```bash
 g++ main.cpp -o program_name
 ```
-run :
+runing:
 ```bash
 ./program_name
 ```
