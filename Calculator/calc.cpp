@@ -1,8 +1,8 @@
 #include <iostream>
-using namespace std;
+#include <limits>
 
 template <class T1, class T2>
-auto sum(T1 a, T2 b){
+auto add(T1 a, T2 b){
     return a + b;
 }
 
@@ -17,27 +17,43 @@ auto div(T1 a, T2 b){
 }
 
 template <class T1, class T2>
-auto del(T1 a, T2 b){
+auto sub(T1 a, T2 b){
     return a - b;
 }
 
 int main(){
     double a, b;
     char oper;
-    cout << "Enter the example:" << endl;
-    cin >> a >> oper >> b;
+    bool success = false;
+    do{
+    std::cout << "Enter the example:" << std::endl;
+    std::cin >> a >> oper >> b;
+        if (std::cin.fail()) {
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    continue;
+        }
         if (oper == '+'){
-            cout << sum(a, b);
+            std::cout << add(a, b) << std::endl;
+            success = true;
         }
         else if (oper == '-'){
-            cout << del(a, b);
+            std::cout << sub(a, b) << std::endl;
+            success = true;
         }
         else if (oper == '*'){
-            cout << mult(a, b);
+            std::cout << mult(a, b) << std::endl;
+            success = true;
         }
         else if (oper == '/'){
-            cout << div(a, b);
+            if (b == 0){
+                std::cout << "error. a number cannot be divided by zero" << std::endl;
+                continue;
+            }
+            else std::cout << div(a, b) << std::endl;
+            success = true;
         }
-    cin.get();
+    } while(!success);
+    std::cin.get();
     return 0;
-}
+    }
