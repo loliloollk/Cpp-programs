@@ -10,3 +10,8 @@ Welcome to my repository with educational projects. Here I assemble my C++ progr
 There is a file inside each folder `name_of_program.cpp`. To compile, use:
 ```bash
 g++ main.cpp -o program_name
+```
+run :
+```bash
+./program_name
+```
