@@ -6,6 +6,11 @@ int main(){
     int stCount;
     cout << "Enter the number of students" << endl;
     cin >> stCount;
+    if (stCount < 1) {
+        cout << "No data provided." << endl;
+        return 0;
+    }
+
     double* arr = new double[stCount];
 
     for(int i = 0; i < stCount; i++){
