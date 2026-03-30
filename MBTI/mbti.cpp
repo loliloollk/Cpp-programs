@@ -94,6 +94,7 @@ int main(){
     for (int i = 0; i < description.size(); i++) {
         cout << description[i] << endl;
     }
+    cout << "for more information, visit https://www.16personalities.com/personality-types" << endl;
     cout << "------------------------------------" << endl;
     cin.get();
     cin.get();
