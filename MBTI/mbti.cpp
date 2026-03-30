@@ -1,6 +1,7 @@
 #include <ios>
 #include <iostream>
 #include <limits>
+#include <vector>
 using namespace std;
 
 void select(short* pquestion, short choice, short* ptarget){
@@ -74,20 +75,25 @@ int main(){
 
     // Result
     string result = "";
-    if(first <= 11) result += "E";
-    else result += "I";
+    vector <string> description(4);
+    if(first <= 11) result += "E", description[0] = "You draw energy from communicating with others and actively interacting with \nthe world. You feel more comfortable discussing ideas out loud than thinking \nabout them alone for a long time.";
+    else result += "I", description[0] = "Your energy is directed inward, towards your own thoughts and feelings. \nYou need time alone to regain your strength after social contacts.";
 
-    if(second <= 11) result += "S";
-    else result += "N";
+    if(second <= 11) result += "S", description[1] = "You trust facts, specific details, and practical experience. It is \nimportant for you to see the real result and rely on what is happening at the moment.";
+    else result += "N", description[2] = "You focus on ideas, symbols, and future possibilities. You like to look \nfor hidden connections and look at the big picture instead of focusing on the details.";
 
-    if(third <= 11) result += "T";
-    else result += "F";
+    if(third <= 11) result += "T", description[2] = "When making decisions, you rely on logic, objective analysis, and common \nsense. You value fairness and efficiency more than personal feelings \nand sympathies.";
+    else result += "F", description[2] = "Your decisions are based on personal values, people's feelings,\nand a desire for harmony. Empathy is important to you and how your \nactions will affect the atmosphere in the team.";
 
-    if(fourth <= 11) result += "J";
-    else result += "P";
+
+    if(fourth <= 11) result += "J", description[3] = "You prefer structure, clear planning, and getting things done. \nYou feel more comfortable when everything is organized and decisions are \nmade in advance.";
+    else result += "P", description[3] = "You like flexibility, spontaneity, and prefer to keep your options open.\nIt's easier for you to adapt to circumstances on the go than to follow a strict \nschedule.";
 
     cout << "\n------------------------------------" << endl;
     cout << "\tYour MBTI is: " << result << endl;
+    for (int i = 0; i < description.size(); i++) {
+        cout << description[i] << endl;
+    }
     cout << "------------------------------------" << endl;
     cin.get();
     return 0;
