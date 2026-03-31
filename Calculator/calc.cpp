@@ -54,6 +54,7 @@ int main(){
             success = true;
         }
     } while(!success);
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::cin.get();
     return 0;
     }

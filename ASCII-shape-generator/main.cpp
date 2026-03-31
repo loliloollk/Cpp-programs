@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 using namespace std;
 int main() {
 
@@ -90,6 +91,7 @@ int main() {
   // Exit
   cout << '\n';
   cout << msgExit[lang] << endl;
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
   cin.get();
   return 0;
 }

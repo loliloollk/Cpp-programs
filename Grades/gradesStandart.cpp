@@ -39,5 +39,7 @@ int main(){
     cout << "Class average grade is: " << classAverage << endl <<
     "The minimal grade is: " << minGrade << endl <<
     "The max grade is: " << maxGrade << endl;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
     return 0;
 }

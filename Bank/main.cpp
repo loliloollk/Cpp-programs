@@ -1,6 +1,5 @@
 #include <iostream>
 #include <limits>
-#include <ostream>
 #include <string>
 
 class BankAccount {
@@ -141,8 +140,7 @@ int main() {
             std::cin >> accChoice;
             if (std::cin.fail()) {
               std::cin.clear();
-              std::cin.ignore(std::numeric_limits<std::streamsize>::max(),
-                              '\n');
+              std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
               std::cout << "Invalid value." << std::endl;
               std::cout << "\n";
               continue;
@@ -159,10 +157,8 @@ int main() {
               std::cin >> amount;
               if (std::cin.fail()) {
                 std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(),
-                                '\n');
-                std::cout << "The amount can only contain numbers."
-                          << std::endl;
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "The amount can only contain numbers." << std::endl;
                 std::cout << "\n";
                 continue;
               }
@@ -174,10 +170,8 @@ int main() {
               std::cin >> amount;
               if (std::cin.fail()) {
                 std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(),
-                                '\n');
-                std::cout << "The amount can only contain numbers."
-                          << std::endl;
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "The amount can only contain numbers." << std::endl;
                 std::cout << "\n";
                 continue;
               }
@@ -210,5 +204,7 @@ int main() {
       continue;
     }
   } while (true);
+  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+  std::cin.get();
   return 0;
 }

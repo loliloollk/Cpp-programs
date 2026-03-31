@@ -1,6 +1,7 @@
 #include <ios>
 #include <iostream>
 #include <limits>
+#include <unistd.h>
 #include <vector>
 using namespace std;
 int main(){
@@ -38,5 +39,7 @@ int main(){
     cout << "Class average grade is: " << classAverage << endl <<
     "The minimal grade is: " << minGrade << endl <<
     "The maximum grade is: " << maxGrade << endl;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
     return 0;
 }
