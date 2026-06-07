@@ -6,7 +6,6 @@ int main(){
     InitWindow(screenWidth, screenHeight, "basic window");
     
     Vector2 BallPosition = {640, 350};
-    Vector2 MousePos = {100, 100};
     HideCursor();
     float BallRadius = 50.0;
     Color ballColor = RED;
