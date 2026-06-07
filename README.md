@@ -8,7 +8,7 @@ Welcome to my repository with educational projects. Here I assemble my C++ progr
 * [Bank](./Bank) - a bank with the ability to create an account and log in to it. Dynamic balance with withdrawal and deposit functions. You can also display account information.
 * [Grades](./Grades) - a minimalistic counter for the average score of grades in the class, as well as finds the minimum and maximum scores among students.
 * [MBTI](./MBTI) - a personality Type Test (MBTI), here I trained working with pointers.
-* [raylib](./raylib) - projects that made with raylib.
+* [raylib](./raylib) - projects that made with raylib. (run - g++ main.cpp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 && ./a.out)
 
 ## How to compile any project
 There is a file inside each folder `name_of_program.cpp`. To compile, use:
