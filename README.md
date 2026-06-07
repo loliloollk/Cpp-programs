@@ -14,7 +14,7 @@ Welcome to my repository with educational projects. Here I assemble my C++ progr
 There is a file inside each folder `name_of_program.cpp`. To compile, use:
 ```bash
 g++ file.cpp -o program_name
-g++ main.cpp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 -o program_name # for raylib projects
+g++ file.cpp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 -o program_name # for raylib projects
 ```
 runing:
 ```bash
